@@ -8,7 +8,7 @@ import keyboard
 from google.cloud import translate_v2 as translate
 r = sr.Recognizer()
 
-path_to_cred = "path to json credentials for Google api"
+path_to_cred = "./winter-cab-379505-b2779ec57cbc.json"
 
 def return_transcript():
     with sr.Microphone() as source:
@@ -61,7 +61,7 @@ def play_audio(path):
 async def main(text):
     async with Client() as client:
         audio_query = await client.create_audio_query(
-            text, speaker=1
+            text, speaker=2
         )
         with open("voice.wav", "wb") as f:
             f.write(await audio_query.synthesis())

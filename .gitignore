@@ -154,3 +154,4 @@ cython_debug/
 ./winter-cab-379505-b2779ec57cbc.json
 credentials.json
 winter-cab-379505-b2779ec57cbc.json
+*.wav
